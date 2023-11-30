@@ -41,12 +41,12 @@ void laserCallback(const sensor_msgs::LaserScan::ConstPtr& laser_msg)
         if (forward_distance < 1.0)
         {
             detect_obstacle_front = true;
-            ROS_INFO("Obstacle detected in front, turning left");
+           
             move_left();
         }
         else
         {
-            ROS_INFO("Moving forward");
+           
             move_forward();
         }
     }
@@ -55,12 +55,12 @@ void laserCallback(const sensor_msgs::LaserScan::ConstPtr& laser_msg)
         if (right_distance < 1.0)
         {
             detect_obstacle_front = false;
-            ROS_INFO("No obstacle in front, turning right");
+            
             move_right();
         }
         else
         {
-            ROS_INFO("Turning left");
+           
             move_left();
            
         }
